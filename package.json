@@ -1,27 +1,21 @@
 {
-  "name": "boilerplate-react",
+  "name": "threejs-playground",
   "type": "module",
   "version": "0.2.0",
-  "description": "React!",
-  "repository": "https://github.com/dev-academy-challenges/react-boilerplate.git",
+  "description": "ThreeJS Playground!",
+  "repository": "https://github.com/michaelbecktl/threejs-playground.git",
   "main": "server/index.js",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "test": "vitest",
     "lint": "eslint --ext .js,.jsx,.ts,.tsx .",
-    "format": "prettier -w '**/*.{js,jsx,ts,tsx}'"
+    "format": "prettier -w '**/*.{js,jsx,ts,tsx}'",
+    "render:build": "npm install && npm run build && npm prune --omit=dev"
   },
-  "eslintConfig": {
-    "extends": "@devacademy/eslint-config/react",
-    "ignorePatterns": [
-      "bundle.js"
-    ]
-  },
-  "author": "Dev Academy Aotearoa",
+  "author": "Michael",
   "license": "ISC",
   "devDependencies": {
-    "@devacademy/eslint-config": "^1.10.1",
     "@types/node": "^18.11.9",
     "@types/react": "^18.0.28",
     "@types/react-dom": "^18.0.11",
@@ -47,5 +41,9 @@
     "semi": false,
     "singleQuote": true
   },
-  "browserslist": "> 2%, not dead"
+  "browserslist": "> 2%, not dead",
+  "dependencies": {
+    "gh-pages": "^6.3.0",
+    "three": "^0.176.0"
+  }
 }
